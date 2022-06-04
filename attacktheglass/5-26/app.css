@@ -1,0 +1,127 @@
+/*  */
+/* HEADER NAV */
+/*  */
+body {
+    font-family: "Libre Franklin";
+}
+#header {
+    max-height: 50%;
+    background-color: orange;
+    padding: 0 3%;
+    margin: 5px;
+}
+#navbar-header {
+    max-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-container {
+    display: inline-block;
+}
+.title-container h1 {
+    font-family: "Unica One";
+    font-size: 2.5em;
+    padding: 0;
+    margin: 5px 0;
+}
+.navlink-container {
+    display:inline-block; 
+}
+.navlink {
+    display:inline; 
+    padding:  10px;
+    font-family: "Unica One";
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/*  */
+/* TOP INFO BODY */
+/*  */
+.info-body {
+    /* min-width: 50%;
+    max-width: 75%; */
+    width: 95%;
+    max-width: 1300px; 
+    margin: auto;
+    background-color: rgb(255, 220, 197);
+    
+}
+.info-bodytext-container {
+    margin: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.info-bodytext {
+    max-width: 95%;
+    text-align: center;
+}
+/*  */
+/* TABLE */
+/*  */
+#maintable-container {
+    width: 95%;
+    max-width: 1300px; 
+    margin: 0 auto;
+
+}
+#maintable {    
+}
+.headerrow {
+    background-color: orange ;
+    font-family: "Unica One";
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+.datarow {
+    height: 100px;
+}
+.tabledata-num {
+    font-family: "Unica One";
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid rgb(202, 202, 202);
+}
+.tabledata-imgcontainer {
+    width: 12%;
+}
+.tabledata-img{
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+}
+.tabledata-name {
+    font-family: "Unica One";
+    font-size: 1.2em;
+    /* min-width: 5%; */
+    width: 10%;
+    text-align: center;
+}
+.tabledata-age {
+    font-family: "Unica One";
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    width: 6%;
+}
+.tabledata-noteinnerdiv {
+    height: 100px;
+    display: block;
+    overflow-y: hidden;
+    
+}
+.tabledata-note {
+    padding: 5px;
+    height: 100px;
+    overflow: hidden;
+    font-size: .9em;
+}
+
+.datarow:nth-of-type(2n) {
+    background-color: #f3f3f3;
+}
