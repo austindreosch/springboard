@@ -58,8 +58,8 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
-    arr.forEach(function(prop){
-        prop[key] = value;
+    arr.forEach(function(obj){
+        obj[key] = value;
     })
     return arr;
 }
@@ -82,10 +82,9 @@ Examples:
 */
 
 function vowelCount(str){
-    let splitArr = str.split("");
     let obj = {};
     const vowels = "aeiou";
-    
+    let splitArr = str.split("");
     splitArr.forEach(function(index){
         let letter = index.toLowerCase();
         if(vowels.indexOf(letter) !== -1){ //if current index(letter) is a vowel
@@ -192,7 +191,9 @@ Examples:
 
 function filterByValue(arr, key) {
     return arr.filter(function(val){
-        return val[key] !== undefined;
+        if (obj[key]){
+            return obj;
+        }
     })
 
 }
