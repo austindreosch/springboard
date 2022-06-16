@@ -38,13 +38,14 @@ function makeBoard() {
 function makeHtmlBoard() {
   // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
   const board = document.getElementById('board');
-  
-  // TODO: add comment for this code
-  let top = document.createElement("tr");
-  top.setAttribute("id", "column-top");
-  top.addEventListener("click", handleClick);
 
-  for (let x = 0; x < WIDTH; x++) {
+  // TODO: add comment for this code
+  let top = document.createElement("tr"); //add top clicker column
+  top.setAttribute("id", "column-top"); //set the id to #column-top
+  top.addEventListener("click", handleClick); //add event listener for the top column
+                                      //function handled later in script
+
+  for (let x = 0; x < WIDTH; x++) { //
     let headCell = document.createElement("td");
     headCell.setAttribute("id", x);
     top.append(headCell);
@@ -74,6 +75,7 @@ function findSpotForCol(x) {
 
 function placeInTable(y, x) {
   // TODO: make a div and insert into correct table cell
+
 }
 
 /** endGame: announce game end */
