@@ -9,7 +9,6 @@ function createInstructor(firstName, lastName){
 let createInstructor = (firstName, lastName) => ({firstName, lastName})
 
 // Computed Property Names
-var favoriteNumber = 42;
 
 var instructor = {
   firstName: "Colt"
@@ -17,3 +16,34 @@ var instructor = {
 instructor[favoriteNumber] = "That is my favorite!"
 
 // 2.
+let favoriteNumber = 42;
+let instructor = {
+  firstName : "Austin",
+  [favoriteNumber]: "That is my favorite!"
+}
+
+// Object Methods
+var instructor = {
+  firstName: "Colt",
+  sayHi: function(){
+    return "Hi!";
+  },
+  sayBye: function(){
+    return this.firstName + " says bye!";
+  }
+}
+// 3.
+let instructor = {
+  firstName: "Colt",
+  sayHi(){return "Hi!";},
+  sayBye(){return this.firstName + " says bye!";}
+}
+
+function animal(species, verb, noise){
+  return {
+    species, 
+    [verb](){
+      return noise;
+    }
+  }
+}
