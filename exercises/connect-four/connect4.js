@@ -3,7 +3,7 @@
  * Player 1 and 2 alternate turns. On each turn, a piece is dropped down a
  * column until a player gets four-in-a-row (horiz, vert, or diag) or until
  * board fills (tie)
- */
+*/
 
 const WIDTH = 7;
 const HEIGHT = 6;
@@ -62,7 +62,6 @@ function makeHtmlBoard() {
 }
 
 /** findSpotForCol: given column x, return top empty y (null if filled) */
-
 function findSpotForCol(x) {
   // TODO: write the real version of this, rather than always returning 0
   for (let i = HEIGHT - 1; i >= 0; i--){
