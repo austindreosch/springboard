@@ -192,6 +192,9 @@ button:hover{
 
 
 
+
+
+
 .divtable {
     display: grid;
     justify-content: center;
@@ -206,7 +209,7 @@ button:hover{
     max-height: 100px;
     height: 100px;
     display: grid;
-    grid-template-columns: 2% 8% 10% 8% 66%;
+    grid-template-columns: 2% 8% 10% 8% 65%;
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     border-radius: 10px 10px 10px 10px;
@@ -286,15 +289,20 @@ button:hover{
     font-size: clamp(.7em, 1.5vw, 1.5em); 
 }
 .info {
-    font-family: "Unica One";
     font-weight: 500;
     text-transform: uppercase;
     font-size: 1.2em;
     height: 100px;
-    font-size: clamp(.48em, 1.2vw, .9em);
     padding: 2px 0px;
+    display: flex;
     text-align: center;
     justify-content: center;
+
+    font-family: "Unica One";
+    font-size: clamp(.48em, 1.2vw, 1em);
+
+    /* font-family: "Monda";
+    font-size: clamp(.40em, 1vw, .75em); */
 }
 .infoinner {
     text-align: center;
@@ -304,58 +312,94 @@ button:hover{
     grid-auto-rows: auto;
     margin: 5px 0px;
     grid-gap: 2px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    
+    /* border: .5px solid #bdbdbd;
+    border-radius: 3px; */
     
 }
-.agetext {
+.age {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+.ageinner {
     background-color: #1b95ec;
+    background-color: #242424;
     padding:  0px 7px 0px 7px;
     border-radius: 3px;
     color: white;
-    /* display: absolute;
-    text-align: center;
-    align-content: center;
-    justify-content: center; */
     margin: 1px 0px;
+    /* border: .5px solid #bdbdbd; */
+    text-shadow: 
+            0px .1px 0px rgb(212, 212, 212),
+            0px .5px 1px rgba(0,0,0,0.5),
+            0px 1px 2px rgba(0,0,0,0.3),
+            0px 1.5px 3px rgba(0,0,0,0.3);
+
 }
-.ranktext {
-    background-color: #000000;
-    padding:  0px 7px 0px 7px;
-    border-radius: 3px;
-    color: white;
-    /* display: absolute;
-    text-align: center;
-    align-content: center;
-    justify-content: center; */
-    margin: 1px 0px;
-}
-.punttext {
-    background-color: #ffb24e;
-    padding:  0px 7px 0px 7px;
-    border-radius: 3px;
-    color: black;
-    /* display: absolute;
-    text-align: center;
-    align-content: center;
-    justify-content: center; */
-    margin: 1px 0px;
-    font-weight: 500;
-}
-.pairings {
+
+.stats {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 1px;
+    /* border: .5px solid #242424;
+    background-color: #242424; */
+    margin: 1px;
+    padding: 1px;
+    border-radius: 5px;
+}
+@media (min-width: 300px) {
+    .stats { 
+        grid-template-columns: repeat(2, 1fr);
+     }
+     .to {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+    
+  }
+@media (min-width: 500px) {
+    .stats { grid-template-columns: repeat(3, 1fr); }
+  }
+
+.elite, .great, .good, .average, .poor, .bad {
+    color: white;
+    padding: 1px;
+    border-radius: 3px;
+
+    text-shadow: 
+            0px .1px 0px rgba(0,0,0,1),
+            0px .5px 1px rgba(0,0,0,0.5),
+            0px 1px 2px rgba(0,0,0,0.3),
+            0px 1.5px 3px rgba(0,0,0,0.3);
     
 }
-.pairings div {
-    /* display: flex;
-    justify-content: center; */
-    background-color: #ffb24e;
-    padding: 0px 7px;
-    border-radius: 3px;
-    margin: 5px 0px;
-    display: grid;
-    grid-auto-rows: auto;
+
+.elite{
+    background-color: #079b00;
 }
+.great{
+    background-color: #5cd856;
+}
+.good{
+    background-color: #abe5a8;
+}
+.average{
+    background-color: rgb(209, 209, 209);
+}
+.poor{
+    background-color: #db9d9d;
+}
+.bad{
+    background-color: #e70b0b;
+}
+
+
+
 .note {
     /* max-height: 100px; */
     /* font-size: .45em; */
@@ -372,16 +416,60 @@ button:hover{
     background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(255,231,178,1) 52%, rgba(222,222,222,1) 100%);
 }
 .note-inner {
+    background-color: #cccccc;
+    border-radius: 10px;
+    /* margin: 5px 10px; */
+    height: 90px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.note-innertext {
     /* margin: 1% auto; */
-    margin: 0px 10px 0px 0px;
+    /* margin: 0px 10px 0px 0px; */
     max-width: 100%;
     max-height: 100px;
-    font-size: clamp(.39em, 1.1vw, .75em);
+    font-size: clamp(.38em, 1.1vw, .68em);
     font-family: "Monda";
     font-weight: 500;
     text-align: center;
     color: rgb(47, 47, 47);
-    
-
+    padding: 2px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
+
+
+
+/* .ranktext {
+    background-color: #000000;
+    padding:  0px 7px 0px 7px;
+    border-radius: 3px;
+    color: white;
+    margin: 1px 0px;
+}
+.punttext {
+    background-color: #ffb24e;
+    padding:  0px 7px 0px 7px;
+    border-radius: 3px;
+    color: black;
+    margin: 1px 0px;
+    font-weight: 500;
+}
+.pairings {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1px;
+    
+}
+.pairings div {
+    background-color: #ffb24e;
+    padding: 0px 7px;
+    border-radius: 3px;
+    margin: 5px 0px;
+    display: grid;
+    grid-auto-rows: auto;
+} */
