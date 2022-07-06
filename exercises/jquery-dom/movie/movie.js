@@ -4,8 +4,8 @@ $('#submit').on('click', function(event){
     let title = $('#title').val()
     let rating = $('#rating').val()
     
-    if($('#rating').val() <= 10 && $('#title').val().length >= 2){
-        $('ol').append(
+    if($('#rating').val() <= 10 && $('#rating').val() >= 0 && $('#title').val().length >= 2){
+        $('ol').app1end(
             `<li>${title} ${rating} <button type="submit" id="delete">Remove</button></li>`
         )
         $('#title').val('');
