@@ -1,0 +1,40 @@
+<!-- Contains a form with two inputs for a title and rating along with a button to submit the form.
+
+When the form is submitted, capture the values for each of the inputs and append them to the DOM along with a button to remove each title and rating from the DOM.
+
+When the button to remove is clicked, remove each title and rating from the DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input placeholder="Title" id="title" type="text" />
+      <input placeholder="Rating" id="rating" type="text" />
+      <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <ol id="ol"></ol>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="movie.js"></script>
+  </body>
+</html>
+
+<!-- <thead>
+        <tr>
+          <th>Title</th>
+          <th>Rating</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tablebody"></tbody> -->
