@@ -1,0 +1,18 @@
+// What is HTTP?
+Hypertext Transfer Protocol - its the ruleset for how data is transfered and communication is made between web servers.
+// What is a URL?
+url is an address/unique-id to a webpage to give to webservers to communicate which webpage or resource you want to get.
+// What is DNS?
+Domain Name System - maps website names to their corresponding unique url address numbered address.
+// What is a query string?
+search parameters that are added to the url
+// What are two HTTP verbs and how are they different?
+GET and POST, GET is for receiving data from an API, and POST is for changing/adding data  
+// What is an HTTP request?
+asking a webserver for access to a webpage at a given URL
+// What is an HTTP response?
+the response is the requested output, either the webpage or a error handled page
+// What is an HTTP header? Give a couple examples of request and response headers you have seen.
+the data printed out after an http request that gives information about the request and its circumstances - request type, response length, the url, the status code etc.
+// What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+translate dns to ip address, http request to the address, server sends back response with html document and renders it along with any other resources required.
