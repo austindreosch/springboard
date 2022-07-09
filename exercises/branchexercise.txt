@@ -1,6 +1,0 @@
-1. git checkout -b
-2. fast-forward merging means putting one set of commits on top of another chronologically, while recursive merging is for when the commits cannot be reconciled chronologically 
-3. git checkout
-4. git branch -D
-5. merge conflicts happen when branches have different changes to the same properties, or changes to properties that affect other functionality.
-
