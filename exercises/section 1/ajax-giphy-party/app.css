@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow&family=Hind+Madurai:wght@500&family=Montserrat&family=Questrial&family=Ropa+Sans&display=swap');
+
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input, button {
+    font-family: Montserrat, sans-serif;
+}
+
+#headcontainer {
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: sandybrown;
+    height: 130px;
+    width: 500px;
+    border-radius: 10px;
+}
+#imagecontainer {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90%;
+    padding: 10px;
+    max-width: 1300px;
+    max-height: 99%vh;
+    background-color: salmon;
+    border-radius: 10px;
+}
