@@ -10,12 +10,12 @@ def print_upper_words_e(string):
             print(word.upper())
 
 
-def print_upper_words_letter(string, letter):
+def print_upper_words_letter(words, letters):
     # for word in string:
     #     if word.startswith(letter.lower()) or word.startswith(letter.upper()):
     #         print(word.upper())
-    for word in string:
-        for let in letter:
-            if word.startswith(let):
+    for word in words:
+        for letter in letters:
+            if word.startswith(letter):
                 print(word.upper())
                 break

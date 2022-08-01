@@ -2,12 +2,12 @@ def convert_temp(unit_in, unit_out, temp):
     if unit_in == "f" and unit_out == "c":
         temp = (temp - 32) * (5 / 9)
         # (°F – 32) x 5/9 = °C
-    if unit_in == "c" and unit_out == "f":
+    elif unit_in == "c" and unit_out == "f":
         temp = temp * (9 / 5) + 32
         # (°C × 9/5) + 32 = °F
-    if unit_in != "f" and unit_in != "c":
+    elif unit_in != "f" and unit_in != "c":
         return f"Incorrect Measurement{unit_in}"
-    if unit_out != "f" and unit_out != "c":
+    elif unit_out != "f" and unit_out != "c":
         return f"Incorrect Measurement{unit_out}"
 
     return temp

@@ -3,6 +3,15 @@
 /******************************************************************************
  * Handling navbar clicks and updating navbar
  */
+  function navSubmitClick(event){ 
+    console.log("navSubmitClick", event) 
+    $submitForm.show();  
+  }
+
+  $navSubmit.on("click", navSubmitClick); //mine
+
+  // $submitFormButton.on("click", $submitForm.hide()); //mine
+  // //later replace this with submit logic
 
 /** Show main list of all stories when click site name */
 
@@ -33,4 +42,5 @@ function updateNavOnLogin() {
   $navLogin.hide();
   $navLogOut.show();
   $navUserProfile.text(`${currentUser.username}`).show();
+  $navSubmit.show(); //mine
 }
