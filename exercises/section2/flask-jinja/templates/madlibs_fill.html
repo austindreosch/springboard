@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} Greet Form {% endblock title %}
+
+{% block content %}
+    <h1>Fill out your madlibs!</h1>    
+    <form action="/story">
+
+        {% for prompt in prompts %}
+        <div>
+            <label for="{{prompt}}">{{prompt}}:</label>
+            <input type="text" name="{{prompt}}">
+        </div>
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+{% endblock content %}
+
+
+
+<!-- <input type="text" placeholder="Your Name" name="username">
+<label for="compliments">Do you want compliments?</label>
+<input id="compliments" type="checkbox" name="wants_compliments"> -->
