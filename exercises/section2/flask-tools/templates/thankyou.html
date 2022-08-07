@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Question 0 {% endblock title %}
+
+{% block content %}
+    <h1>Thank you for participating!</h1>
+    <p>Click here to go back to homepage.</p>
+    <button onclick="location.href='/'" type="button">Back home.</button>
+
+
+    <h3>Here were your answers:</h3>
+    <p>{{answers}}</p>
+    
+{% endblock content %}
