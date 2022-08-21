@@ -1,0 +1,82 @@
+body {
+    background-image: url(/static/cool-background.png);
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+}
+
+#game-section {
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+
+    background-color: rgb(192, 193, 201);
+}
+
+.gameboard {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    font-size: 3rem;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: royalblue;
+}
+
+.navbar {
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 700px;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0; */
+    margin: auto;
+}
+
+.navbar a {
+    padding: 0 29px;
+}
+
+.board {
+    border: solid 1px black;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+.board td {
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.msg {
+    padding: 1em;
+}
+
+.msg.ok {
+    color: white;
+    background-color: green;
+}
+
+.msg.err {
+    color: white;
+    background-color: tomato;
+}
