@@ -13,6 +13,23 @@
   // $submitFormButton.on("click", $submitForm.hide()); //mine
   // //later replace this with submit logic
 
+
+  function navFavoritesClick(event) {
+    console.log("navFavoritesClick", event) 
+    hidePageComponents();
+    putFavoritesListOnPage();
+
+  }
+  $body.on("click", "#nav-favorites", navFavoritesClick);
+
+  function navMyStories(event) {
+    console.log("navMyStories", event) 
+
+
+  }
+  $body.on("click", "#nav-my-stories", navMyStories);
+
+
 /** Show main list of all stories when click site name */
 
 function navAllStories(evt) {

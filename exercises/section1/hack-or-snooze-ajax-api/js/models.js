@@ -207,4 +207,52 @@ class User {
       return null;
     }
   }
+
+
+  //****************************************************************** */
+  //****************************************************************** */
+
+  /** Update API with favorite/not-favorite.
+   *   - newState: "add" or "remove"
+   *   - story: Story instance to make favorite / not favorite
+   * */
+   async addOrRemoveFavorite(newState, story) {
+    const token = this.loginToken;
+
+    let method = newState === "add" ? "POST" : "DELETE"
+
+    await axios({
+      url: `${BASE_URL}/users/${this.username}/favorites/${story.storyId}`,
+      method: method,
+      data: { token },
+    });
+
+
+  }
+
+
+  /** Add a story to the list of user favorites and update the API
+   * - story: a Story instance to add to favorites
+   */
+  async addFavorite(story) {
+    this.favorites.push(story);
+    await this.addOrRemoveFavorite("add", story);
+
+  }
+  /** Remove a story to the list of user favorites and update the API
+   * - story: the Story instance to remove from favorites
+   */
+  async removeFavorite(story) {
+    this.favorites = this.favorites.filter(s => s.storyId === story.storyId);
+    await this.addOrRemoveFavorite("delete", story);
+
+
+  }
+
+  /** Return true/false if given Story instance is a favorite of this user. */
+  isFavorite(story) { //mine
+    return this.favorites.some(s => (s.storyId === story.storyId));
+  }
+  //****************************************************************** */
+  //****************************************************************** */
 }

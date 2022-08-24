@@ -6,6 +6,12 @@ const $body = $("body");
 
 const $storiesLoadingMsg = $("#stories-loading-msg");
 const $allStoriesList = $("#all-stories-list");
+const $favoritedStories = $("#favorited-stories"); //mine
+const $ownStories = $("#my-stories"); //mine
+
+// selector that finds all three story lists
+const $storiesLists = $(".stories-list"); //mine
+
 
 const $loginForm = $("#login-form");
 const $signupForm = $("#signup-form");

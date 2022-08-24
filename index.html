@@ -39,19 +39,14 @@
       <div class="nav-right">
         <a class="nav-link" href="#" id="nav-login">login/signup</a>
         <a class="nav-link" href="#" id="nav-user-profile"></a>
-        <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
         <!-- mine // add class hidden later-->
-
-        <a href="#" class="nav-link hiddenNOT" id="nav-submit">
-          <small>(submit)</small>
-        </a>
-        <a href="#" class="nav-link hiddenNOT" id="nav-favorites">
-          <small>(favorites)</small>
-        </a>
-        <a href="#" class="nav-link hiddenNOT" id="nav-my-stories">
-          <small>(my stories)</small>
-        </a>
+        <a href="#" class="nav-link hiddenNOT" href="#" id="nav-favorites"><small>(favorites)<small></a>
+        <a href="#" class="nav-link hiddenNOT" id="nav-submit"><small>(submit)<small></a>
+        <!-- mine -->
+        <a class="nav-link hiddenNOT" id="nav-logout" href="#"><small>(logout)</small></a
+        >
       </div>
+      <div></div>
     </nav>
 
     <!-- area for stories (all stories, user stories, favorites) -->
@@ -80,14 +75,11 @@
       <!-- ********************************************* -->
       <!-- **************MINE ********************* -->
 
-      <!-- list of favorited stories -->
+      <!-- list of favorited stories (wasnt in new starter code?) -->
       <ol id="favorite-stories-list" class="stories-list"></ol>
 
       <!-- loading message (removed by JS after stories loaded) -->
       <div id="stories-loading-msg">Loading&hellip;</div>
-
-      <!-- List of stories favorited by the user -->
-      <ol id="favorited-stories" class="hidden stories-list"></ol>
 
       <!-- List of all stories -->
       <ol id="all-stories-list" class="stories-list"></ol>
