@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/static/app.css" />
+    <title>{{user.name}}</title>
+  </head>
+
+  <body>
+    <h1>{{user.first_name}} {{user.last_name}}</h1>
+    <img class="profile_img_large" src="{{user.image_url}}" alt="" />
+    <!-- <a href="/users/{{user.id}}/delete">Delete</a> -->
+    <form>
+      <button formaction="/users/{{ user.id }}/delete" formmethod="POST">
+        Delete User
+      </button>
+    </form>
+    <hr />
+    <h3>{{user.first_name}}'s Profile Settings</h3>
+    <form action="/users/{{user.id}}/edit" method="POST">
+      <input type="text" name="first_name" value="{{user.first_name}}" />
+      <input type="text" name="last_name" value="{{user.last_name}}" />
+      <input type="text" name="image_url" value="{{user.image_url}}" />
+      <button>SUBMIT EDIT</button>
+    </form>
+    <hr />
+    <h3>{{user.first_name}}'s Posts</h3>
+    <ul>
+      {% for post in user.posts %}
+      <li>
+        <a href="/posts/{{post.id}}">{{post.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <hr />
+    <h3>Create New Post:</h3>
+    <form action="/users/{{user.id}}/posts/new" method="POST">
+      <input type="text" name="title" placeholder="title" />
+      <input type="text" name="content" placeholder="content" />
+      <button>SUBMIT POST</button>
+    </form>
+    <hr />
+    <a href="/">Go Back</a>
+  </body>
+</html>
