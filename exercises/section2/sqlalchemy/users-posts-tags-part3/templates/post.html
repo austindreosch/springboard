@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/static/app.css" />
+    <title>{{post.user.first_name}}</title>
+  </head>
+
+  <body>
+    <h1>{{post.user.first_name}}'s Post</h1>
+    <small>Posted at: {{post.created_at}}</small>
+
+    <div class="details-container">
+      <h3>{{post.title}}</h3>
+      <p>{{post.content}}</p>
+      <hr />
+
+      {% if post.tags %}
+      <p>
+        <h3>Tags:</h3>
+        {% for tag in post.tags %}
+          <a href="/tags/{{tag.id}}">#{{tag.name}}</a>
+        {% endfor %}
+      </p>
+      {% endif %}
+  
+      <hr />
+      <h3>Edit Post</h3>
+      <form action="/posts/{{post.id}}/edit" method="POST">
+        <input type="text" name="title" value="{{post.title}}" />
+        <input type="text" name="content" value="{{post.content}}" />
+        <button>SUBMIT EDIT</button>
+      </form>
+
+      <form>
+        <button formaction="/posts/{{ post.id }}/delete" formmethod="POST">
+          DELETE POST
+        </button>
+      </form>
+    </div>
+
+    <a href="/">Go Back</a>
+  </body>
+</html>

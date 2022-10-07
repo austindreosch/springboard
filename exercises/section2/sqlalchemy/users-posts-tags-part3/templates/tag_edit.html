@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/static/app.css" />
+    <title>#{{tag.name}}</title>
+  </head>
+
+  <body>
+    <h1>#{{tag.name}}</h1>
+
+    <div class="details-container">
+      <form action="/tags/{{ tag.id }}/edit" method="POST">
+        <input type="text" name="tag_name" value="{{tag.name}}" />
+        <button>SUBMIT EDIT</button>
+      </form>
+      <hr />
+
+      <!-- real -->
+      <h3>posts with <b>#{{tag.name}}</b></h3>
+      <ul>
+        {% for post in tag.posts %}
+        <li>
+          <a href="/posts/{{post.id}}">{{post.title}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <hr />
+      <form>
+        <button formaction="/tags/{{ tag.id }}/delete" formmethod="POST">
+          DELETE TAG
+        </button>
+      </form>
+    </div>
+
+    <a href="/">Go Back</a>
+  </body>
+</html>
