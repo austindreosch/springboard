@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/static/app.css" />
+    <title>{{pet.name}}</title>
+  </head>
+
+  <body>
+    <h1>{{pet.name}}</h1>
+    <img class="profile_img_large" src="{{pet.photo_url}}" alt="" />
+    <form>
+      <button formaction="/pets/{{ pet.id }}/delete" formmethod="POST">
+        Delete User
+      </button>
+    </form>
+
+    <div class="details-container">
+      <h3>Age: {{pet.age}} // Species: {{pet.species}}</h3>
+      <form action="/pets/{{pet.id}}" method="POST">
+        {{form.hidden_tag()}} {% for field in form if field.widget.input_type !=
+        'hidden' %}
+
+        <p>{{field.label}} {{field}}</p>
+
+        {% endfor %}
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <a href="/">Go Back</a>
+  </body>
+</html>

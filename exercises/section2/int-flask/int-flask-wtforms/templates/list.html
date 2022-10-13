@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/static/app.css" />
+    <title>blogly.com</title>
+  </head>
+
+  <body>
+    <h1>ADOPTLY</h1>
+    <div class="flashdiv">
+      {% for msg in get_flashed_messages() %}
+      <p>{{ msg }}</p>
+      {% endfor %}
+    </div>
+
+
+    <div class="container">
+
+      <div>
+        <a href="/add">Add New Pet Form</a>
+      </div>
+
+      <h2>Pets List</h2>
+      {% for pet in pets %}
+      <div class="pet-container">
+        <img class="profile_img_large" src="{{ pet.photo_url }}">
+        <a href="/pets/{{pet.id}}">{{ pet.name }}</a>
+      {% if pet.available %} <b>  is available!</b> {% endif %}
+      </div>
+      {% endfor %}
+
+        
+
+    </div>
+
+
+</html>
